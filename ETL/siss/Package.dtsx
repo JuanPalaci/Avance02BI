@@ -1,69 +1,35 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
-  DTS:CreationDate="6/5/2025 11:52:04 AM"
+  DTS:CreationDate="6/5/2025 4:12:51 PM"
   DTS:CreationName="Microsoft.Package"
-  DTS:CreatorComputerName="RODRIGO"
-  DTS:CreatorName="RODRIGO\isira"
-  DTS:DTSID="{95DF8138-2E45-40B1-8D03-FD811ABB78B5}"
+  DTS:CreatorComputerName="MONKEYDLAP"
+  DTS:CreatorName="MONKEYDLAP\carlo"
+  DTS:DTSID="{17BCF95A-06FD-496F-A0D6-705B6150030A}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="16.0.5685.0"
-  DTS:LocaleID="1033"
+  DTS:LocaleID="2058"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="9"
-  DTS:VersionGUID="{31663F8D-1AC5-4EE4-9D3C-357786612A5C}">
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{45560E20-E1A6-4981-9A91-BBBD4764F060}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
-      DTS:CreationName="FLATFILE"
-      DTS:DTSID="{9AB679D5-7B7C-4725-865C-36F88905A585}"
-      DTS:ObjectName="Flat File Connection Manager">
+      DTS:refId="Package.ConnectionManagers[localhost,1433.FarmaciaDB.sa]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{60B1E8D8-7403-4272-9DBE-CE746114A721}"
+      DTS:ObjectName="localhost,1433.FarmaciaDB.sa">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:Format="Delimited"
-          DTS:LocaleID="1033"
-          DTS:HeaderRowDelimiter="_x000D__x000A_"
-          DTS:RowDelimiter=""
-          DTS:TextQualifier="_x003C_none_x003E_"
-          DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\isira\Desktop\Proyecto Bi\Avance02BI\CSV\DimFecha.csv">
-          <DTS:FlatFileColumns>
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="3"
-              DTS:TextQualified="True"
-              DTS:ObjectName="ID_Producto"
-              DTS:DTSID="{22025EF9-77A6-4361-B4B7-2EEA83594181}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="3"
-              DTS:TextQualified="True"
-              DTS:ObjectName="ID_Sucursal"
-              DTS:DTSID="{DD57E204-6558-4AE8-84A6-8360AD432337}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="3"
-              DTS:TextQualified="True"
-              DTS:ObjectName="StockActual"
-              DTS:DTSID="{F53D2FFA-A861-4EB6-807F-E3C0FD91F4D5}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:DataType="133"
-              DTS:TextQualified="True"
-              DTS:ObjectName="FechaDeRestock"
-              DTS:DTSID="{9DF80DF3-BB48-49DC-9910-8CE625FF59E4}"
-              DTS:CreationName="" />
-          </DTS:FlatFileColumns>
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost,1433;User ID=sa;Initial Catalog=FarmaciaDB;Provider=MSOLEDBSQL19.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-Package-{60B1E8D8-7403-4272-9DBE-CE746114A721}localhost,1433.FarmaciaDB.sa;Use Encryption for Data=Optional;Trust Server Certificate=True;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAvsdLpLkxvUq3v6mZxXdvhwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAqB1uZR3pL+7e7nLH5GYm1SSAoiq1rA6q0uqCYAClWSwAAAAAOgAAAAAIAACAAAACHA/l0wyXQBt5J6mfmcM+uRe81m+SdOWLcJS+ECN4WbCAAAACsASIpftoTF/td93YZjdcXtbe7VsnRRYvNkpZOs2IhIUAAAABegWoT6DZO2W2CcHmRtsUl8Tl9N0J9ytlaDcJPLbMrByEgVfqx+cRIoDaAdsng5aT1FL+dex+/b/0JsJBhN6Ui</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -74,7 +40,7 @@
       DTS:refId="Package\Data Flow Task"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{8794950C-82F4-4E8E-BD33-3EA65E7026A8}"
+      DTS:DTSID="{E4E7D319-D902-46D3-901E-814C34439AED}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Data Flow Task"
@@ -84,6 +50,94 @@
         <pipeline
           version="1">
           <components>
+            <component
+              refId="Package\Data Flow Task\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[Cantidad]"
+                      cachedDataType="i4"
+                      cachedName="Cantidad"
+                      lineageId="Package\Data Flow Task\FactVentas.Outputs[OLE DB Source Output].Columns[Cantidad]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[PrecioUnitario]"
+                      cachedDataType="numeric"
+                      cachedName="PrecioUnitario"
+                      cachedPrecision="10"
+                      cachedScale="2"
+                      lineageId="Package\Data Flow Task\Lookup.Outputs[Lookup Match Output].Columns[PrecioUnitario]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[PrecioEstimado]"
+                      dataType="decimal"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[PrecioEstimado]"
+                      name="PrecioEstimado"
+                      scale="2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_DECIMAL,2)(#{Package\Data Flow Task\FactVentas.Outputs[OLE DB Source Output].Columns[Cantidad]} * #{Package\Data Flow Task\Lookup.Outputs[Lookup Match Output].Columns[PrecioUnitario]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_DECIMAL,2)(Cantidad * PrecioUnitario)</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
             <component
               refId="Package\Data Flow Task\Destination Fecha"
               componentClassID="Microsoft.OLEDBDestination"
@@ -143,8 +197,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Destination Fecha.Connections[OleDbConnection]"
-                  connectionManagerID="{73E22616-57F9-41A7-B925-37F9E9C6155C}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[localhost.FarmaciaDB.sa]"
+                  connectionManagerID="Package.ConnectionManagers[localhost,1433.FarmaciaDB.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost,1433.FarmaciaDB.sa]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -306,8 +360,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Destination Inventario.Connections[OleDbConnection]"
-                  connectionManagerID="{73E22616-57F9-41A7-B925-37F9E9C6155C}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[localhost.FarmaciaDB.sa]"
+                  connectionManagerID="Package.ConnectionManagers[localhost,1433.FarmaciaDB.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost,1433.FarmaciaDB.sa]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -449,8 +503,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Destination Producto.Connections[OleDbConnection]"
-                  connectionManagerID="{73E22616-57F9-41A7-B925-37F9E9C6155C}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[localhost.FarmaciaDB.sa]"
+                  connectionManagerID="Package.ConnectionManagers[localhost,1433.FarmaciaDB.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost,1433.FarmaciaDB.sa]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -618,8 +672,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Destination Sucursal.Connections[OleDbConnection]"
-                  connectionManagerID="{73E22616-57F9-41A7-B925-37F9E9C6155C}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[localhost.FarmaciaDB.sa]"
+                  connectionManagerID="Package.ConnectionManagers[localhost,1433.FarmaciaDB.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost,1433.FarmaciaDB.sa]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -744,7 +798,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[VentasFarmacia]</property>
+                  name="OpenRowset">[DestinationVentas]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -787,8 +841,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Destination Ventas.Connections[OleDbConnection]"
-                  connectionManagerID="{73E22616-57F9-41A7-B925-37F9E9C6155C}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[localhost.FarmaciaDB.sa]"
+                  connectionManagerID="Package.ConnectionManagers[localhost,1433.FarmaciaDB.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost,1433.FarmaciaDB.sa]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -844,6 +898,29 @@
                       cachedScale="2"
                       externalMetadataColumnId="Package\Data Flow Task\Destination Ventas.Inputs[OLE DB Destination Input].ExternalColumns[Total_Venta]"
                       lineageId="Package\Data Flow Task\FactVentas.Outputs[OLE DB Source Output].Columns[Total_Venta]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Destination Ventas.Inputs[OLE DB Destination Input].Columns[PrecioUnitario]"
+                      cachedDataType="numeric"
+                      cachedName="PrecioUnitario"
+                      cachedPrecision="10"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Data Flow Task\Destination Ventas.Inputs[OLE DB Destination Input].ExternalColumns[PrecioUnitario]"
+                      lineageId="Package\Data Flow Task\Lookup.Outputs[Lookup Match Output].Columns[PrecioUnitario]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Destination Ventas.Inputs[OLE DB Destination Input].Columns[PrecioEstimado]"
+                      cachedDataType="decimal"
+                      cachedName="PrecioEstimado"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Data Flow Task\Destination Ventas.Inputs[OLE DB Destination Input].ExternalColumns[PrecioEstimado]"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[PrecioEstimado]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Destination Ventas.Inputs[OLE DB Destination Input].Columns[NombreProducto]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="NombreProducto"
+                      externalMetadataColumnId="Package\Data Flow Task\Destination Ventas.Inputs[OLE DB Destination Input].ExternalColumns[NombreProducto]"
+                      lineageId="Package\Data Flow Task\Lookup.Outputs[Lookup Match Output].Columns[NombreProducto]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -877,6 +954,24 @@
                       name="Total_Venta"
                       precision="10"
                       scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destination Ventas.Inputs[OLE DB Destination Input].ExternalColumns[PrecioUnitario]"
+                      dataType="numeric"
+                      name="PrecioUnitario"
+                      precision="10"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destination Ventas.Inputs[OLE DB Destination Input].ExternalColumns[PrecioEstimado]"
+                      dataType="numeric"
+                      name="PrecioEstimado"
+                      precision="28"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Destination Ventas.Inputs[OLE DB Destination Input].ExternalColumns[NombreProducto]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="NombreProducto" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -956,8 +1051,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\DimFecha.Connections[OleDbConnection]"
-                  connectionManagerID="{73E22616-57F9-41A7-B925-37F9E9C6155C}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[localhost.FarmaciaDB.sa]"
+                  connectionManagerID="Package.ConnectionManagers[localhost,1433.FarmaciaDB.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost,1433.FarmaciaDB.sa]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1152,8 +1247,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\DimInventario.Connections[OleDbConnection]"
-                  connectionManagerID="{73E22616-57F9-41A7-B925-37F9E9C6155C}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[localhost.FarmaciaDB.sa]"
+                  connectionManagerID="Package.ConnectionManagers[localhost,1433.FarmaciaDB.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost,1433.FarmaciaDB.sa]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1312,8 +1407,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\DimProducto.Connections[OleDbConnection]"
-                  connectionManagerID="{73E22616-57F9-41A7-B925-37F9E9C6155C}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[localhost.FarmaciaDB.sa]"
+                  connectionManagerID="Package.ConnectionManagers[localhost,1433.FarmaciaDB.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost,1433.FarmaciaDB.sa]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1514,8 +1609,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\DimSucursal.Connections[OleDbConnection]"
-                  connectionManagerID="{73E22616-57F9-41A7-B925-37F9E9C6155C}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[localhost.FarmaciaDB.sa]"
+                  connectionManagerID="Package.ConnectionManagers[localhost,1433.FarmaciaDB.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost,1433.FarmaciaDB.sa]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1716,8 +1811,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\FactVentas.Connections[OleDbConnection]"
-                  connectionManagerID="{73E22616-57F9-41A7-B925-37F9E9C6155C}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[localhost.FarmaciaDB.sa]"
+                  connectionManagerID="Package.ConnectionManagers[localhost,1433.FarmaciaDB.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost,1433.FarmaciaDB.sa]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1885,18 +1980,204 @@
                 </output>
               </outputs>
             </component>
+            <component
+              refId="Package\Data Flow Task\Lookup"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[DimProducto]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[DimProducto]) [refTable]
+where [refTable].[ID_Producto] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="ID_Producto" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="NombreProducto" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Categoria" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="PrecioUnitario" dataType="DT_NUMERIC" length="0" precision="10" scale="2" codePage="0"/&gt;&lt;referenceColumn name="EstadoDeRotacion" dataType="DT_STR" length="20" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Data Flow Task\FactVentas.Outputs[OLE DB Source Output].Columns[ID_Producto]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Lookup.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost,1433.FarmaciaDB.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost,1433.FarmaciaDB.sa]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Lookup.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Lookup.Inputs[Lookup Input].Columns[ID_Producto]"
+                      cachedDataType="i4"
+                      cachedName="ID_Producto"
+                      lineageId="Package\Data Flow Task\FactVentas.Outputs[OLE DB Source Output].Columns[ID_Producto]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">ID_Producto</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Lookup.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Data Flow Task\Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Lookup.Outputs[Lookup Match Output].Columns[PrecioUnitario]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Data Flow Task\Lookup.Outputs[Lookup Match Output].Columns[PrecioUnitario]"
+                      name="PrecioUnitario"
+                      precision="10"
+                      scale="2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">PrecioUnitario</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Lookup.Outputs[Lookup Match Output].Columns[NombreProducto]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copy Column"
+                      length="100"
+                      lineageId="Package\Data Flow Task\Lookup.Outputs[Lookup Match Output].Columns[NombreProducto]"
+                      name="NombreProducto"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">NombreProducto</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Lookup.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Data Flow Task\Lookup.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Lookup.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Data Flow Task\Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
           </components>
           <paths>
             <path
+              refId="Package\Data Flow Task.Paths[Derived Column Output]"
+              endId="Package\Data Flow Task\Destination Ventas.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Lookup Match Output]"
+              endId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]"
+              name="Lookup Match Output"
+              startId="Package\Data Flow Task\Lookup.Outputs[Lookup Match Output]" />
+            <path
               refId="Package\Data Flow Task.Paths[OLE DB Source Output]"
-              endId="Package\Data Flow Task\Destination Fecha.Inputs[OLE DB Destination Input]"
+              endId="Package\Data Flow Task\Lookup.Inputs[Lookup Input]"
               name="OLE DB Source Output"
-              startId="Package\Data Flow Task\DimFecha.Outputs[OLE DB Source Output]" />
+              startId="Package\Data Flow Task\FactVentas.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\Data Flow Task.Paths[OLE DB Source Output1]"
-              endId="Package\Data Flow Task\Destination Inventario.Inputs[OLE DB Destination Input]"
+              endId="Package\Data Flow Task\Destination Sucursal.Inputs[OLE DB Destination Input]"
               name="OLE DB Source Output"
-              startId="Package\Data Flow Task\DimInventario.Outputs[OLE DB Source Output]" />
+              startId="Package\Data Flow Task\DimSucursal.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\Data Flow Task.Paths[OLE DB Source Output2]"
               endId="Package\Data Flow Task\Destination Producto.Inputs[OLE DB Destination Input]"
@@ -1904,14 +2185,14 @@
               startId="Package\Data Flow Task\DimProducto.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\Data Flow Task.Paths[OLE DB Source Output3]"
-              endId="Package\Data Flow Task\Destination Sucursal.Inputs[OLE DB Destination Input]"
+              endId="Package\Data Flow Task\Destination Inventario.Inputs[OLE DB Destination Input]"
               name="OLE DB Source Output"
-              startId="Package\Data Flow Task\DimSucursal.Outputs[OLE DB Source Output]" />
+              startId="Package\Data Flow Task\DimInventario.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\Data Flow Task.Paths[OLE DB Source Output4]"
-              endId="Package\Data Flow Task\Destination Ventas.Inputs[OLE DB Destination Input]"
+              endId="Package\Data Flow Task\Destination Fecha.Inputs[OLE DB Destination Input]"
               name="OLE DB Source Output"
-              startId="Package\Data Flow Task\FactVentas.Outputs[OLE DB Source Output]" />
+              startId="Package\Data Flow Task\DimFecha.Outputs[OLE DB Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -1932,7 +2213,7 @@
         <NodeLayout
           Size="150.4,41.6"
           Id="Package\Data Flow Task"
-          TopLeft="5.5,5.5" />
+          TopLeft="137.499992487331,118.733332507677" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -1940,98 +2221,58 @@
     design-time-name="Package\Data Flow Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="125.6,41.6"
-          Id="Package\Data Flow Task\DimFecha"
-          TopLeft="7.99999986340602,7.23333332127995" />
-        <NodeLayout
-          Size="142.4,41.6"
-          Id="Package\Data Flow Task\DimInventario"
-          TopLeft="2.49999986340596,114.399999204477" />
-        <NodeLayout
-          Size="138.4,41.6"
-          Id="Package\Data Flow Task\DimProducto"
-          TopLeft="0.833333287801935,229.666665069593" />
-        <NodeLayout
-          Size="137.6,41.6"
-          Id="Package\Data Flow Task\DimSucursal"
-          TopLeft="0.833333287801906,336.26666432831" />
-        <NodeLayout
-          Size="131.2,41.6"
-          Id="Package\Data Flow Task\FactVentas"
-          TopLeft="2.49999986340595,465.399996763666" />
-        <NodeLayout
-          Size="165.6,41.6"
-          Id="Package\Data Flow Task\Destination Ventas"
-          TopLeft="282.499984564881,453.466664581431" />
-        <NodeLayout
-          Size="162.4,41.6"
-          Id="Package\Data Flow Task\Destination Fecha"
-          TopLeft="269.999985247851,0.866666660639968" />
-        <NodeLayout
-          Size="179.2,41.6"
-          Id="Package\Data Flow Task\Destination Inventario"
-          TopLeft="280.833317989277,108.333332579997" />
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="175.2,41.6"
           Id="Package\Data Flow Task\Destination Producto"
-          TopLeft="267.499985384445,230.466665069593" />
+          TopLeft="451.666641988689,513.866663098865" />
+        <NodeLayout
+          Size="138.4,41.6"
+          Id="Package\Data Flow Task\DimProducto"
+          TopLeft="184.999989892046,513.066663098865" />
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\Data Flow Task\Derived Column"
+          TopLeft="557.499969539544,693.333331911034" />
+        <NodeLayout
+          Size="137.6,41.6"
+          Id="Package\Data Flow Task\DimSucursal"
+          TopLeft="184.999989892046,619.666662357582" />
         <NodeLayout
           Size="173.6,41.6"
           Id="Package\Data Flow Task\Destination Sucursal"
-          TopLeft="269.999985247851,321.999998806715" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
-          TopLeft="133.599999863406,24.84999999096">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="136.399985384445,0"
-              Start="0,0"
-              End="128.899985384445,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="128.899985384445,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="41.3605200359725,5,46.1789453125,11.453125"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[OLE DB Source Output1]"
-          TopLeft="144.899999863406,132.166665892237">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="135.933318125871,0"
-              Start="0,0"
-              End="128.433318125871,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="128.433318125871,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="45.0865418754356,5,38.260234375,9.7978515625"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="454.166641852095,605.399996835987" />
+        <NodeLayout
+          Size="131.2,41.6"
+          Id="Package\Data Flow Task\FactVentas"
+          TopLeft="186.66665646765,748.799994792938" />
+        <NodeLayout
+          Size="112.8,41.6"
+          Id="Package\Data Flow Task\Lookup"
+          TopLeft="348.981462413975,719.622217218059" />
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\Data Flow Task\Destination Fecha"
+          TopLeft="454.166641852095,284.266664689912" />
+        <NodeLayout
+          Size="165.6,41.6"
+          Id="Package\Data Flow Task\Destination Ventas"
+          TopLeft="862.962915812747,606.866663514707" />
+        <NodeLayout
+          Size="125.6,41.6"
+          Id="Package\Data Flow Task\DimFecha"
+          TopLeft="192.16665646765,290.633331350552" />
+        <NodeLayout
+          Size="179.2,41.6"
+          Id="Package\Data Flow Task\Destination Inventario"
+          TopLeft="464.999974593521,391.733330609269" />
+        <NodeLayout
+          Size="142.4,41.6"
+          Id="Package\Data Flow Task\DimInventario"
+          TopLeft="186.66665646765,397.799997233749" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[OLE DB Source Output2]"
-          TopLeft="139.233333287802,250.866665069593">
+          TopLeft="323.399989892046,534.266663098865">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2048,14 +2289,12 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="41.5388533920716,5,37.6889453125,9.7978515625"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[OLE DB Source Output3]"
-          TopLeft="138.433333287802,357.06666432831">
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output1]"
+          TopLeft="322.599989892046,640.466662357582">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2084,115 +2323,160 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="52.0546150425246,1,27.457421875,9.7978515625"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[OLE DB Source Output4]"
-          TopLeft="133.699999863406,486.199996763666">
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="317.86665646765,769.599994792938">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="148.799984701475,-11.9333321822352"
+              EndConnector="31.1148059463248,-29.1777775748787"
               Start="0,0"
-              End="141.299984701475,-11.9333321822352">
+              End="23.6148059463248,-29.1777775748787">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="70.3999923507376,0" />
+                    End="11.5574029731624,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="70.3999923507376,0"
-                    Point2="74.3999923507376,0"
-                    Point3="74.3999923507376,-4" />
+                    Point1="11.5574029731624,0"
+                    Point2="15.5574029731624,0"
+                    Point3="15.5574029731624,-4" />
                   <mssgle:LineSegment
-                    End="74.3999923507376,-7.93333218223518" />
+                    End="15.5574029731624,-25.1777775748787" />
                   <mssgle:CubicBezierSegment
-                    Point1="74.3999923507376,-7.93333218223518"
-                    Point2="74.3999923507376,-11.9333321822352"
-                    Point3="78.3999923507376,-11.9333321822352" />
+                    Point1="15.5574029731624,-25.1777775748787"
+                    Point2="15.5574029731624,-29.1777775748787"
+                    Point3="19.5574029731624,-29.1777775748787" />
                   <mssgle:LineSegment
-                    End="141.299984701475,-11.9333321822352" />
+                    End="23.6148059463248,-29.1777775748787" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Lookup Match Output]"
+          TopLeft="461.781462413975,740.422217218059">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="95.7185071255691,-26.2888853070252"
+              Start="0,0"
+              End="88.2185071255691,-26.2888853070252">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="43.8592535627846,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="43.8592535627846,0"
+                    Point2="47.8592535627846,0"
+                    Point3="47.8592535627846,-4" />
+                  <mssgle:LineSegment
+                    End="47.8592535627846,-22.2888853070252" />
+                  <mssgle:CubicBezierSegment
+                    Point1="47.8592535627846,-22.2888853070252"
+                    Point2="47.8592535627846,-26.2888853070252"
+                    Point3="51.8592535627846,-26.2888853070252" />
+                  <mssgle:LineSegment
+                    End="88.2185071255691,-26.2888853070252" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="51.0248751632376,1,46.750234375,11.453125"
+              BoundingBox="-0.33213315596543,1,96.3827734375,11.609375"
               RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Derived Column Output]"
+          TopLeft="633.899969539544,693.333331911034">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="311.862946273203,-44.8666683963269"
+              Start="0,0"
+              End="311.862946273203,-37.3666683963269">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-18.4333341981634" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-18.4333341981634"
+                    Point2="0,-22.4333341981634"
+                    Point3="4,-22.4333341981634" />
+                  <mssgle:LineSegment
+                    End="307.862946273203,-22.4333341981634" />
+                  <mssgle:CubicBezierSegment
+                    Point1="307.862946273203,-22.4333341981634"
+                    Point2="311.862946273203,-22.4333341981634"
+                    Point3="311.862946273203,-26.4333341981634" />
+                  <mssgle:LineSegment
+                    End="311.862946273203,-37.3666683963269" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output4]"
+          TopLeft="317.76665646765,308.249998020232">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="136.399985384445,0"
+              Start="0,0"
+              End="128.899985384445,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="128.899985384445,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output3]"
+          TopLeft="329.06665646765,415.566663921509">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="135.933318125871,0"
+              Start="0,0"
+              End="128.433318125871,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="128.433318125871,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\DimFecha">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\DimInventario">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\DimProducto">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\DimSucursal">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\FactVentas">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task\Destination Ventas">
     <Properties>
@@ -2207,46 +2491,30 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Destination Fecha">
+    design-time-name="Package\Data Flow Task\Lookup">
     <Properties>
       <Property>
-        <Name>DataSourceViewID</Name>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimProducto]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q2:string">Table</Value>
+          type="q4:int">0</Value>
       </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Destination Inventario">
-    <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
       </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Destination Producto">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Destination Sucursal">
+    design-time-name="Package\Data Flow Task\DimFecha">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
