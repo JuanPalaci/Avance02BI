@@ -1,4 +1,0 @@
-CREATE DATABASE FarmaciaDB;
-GO
-USE FarmaciaDB;
-GO
