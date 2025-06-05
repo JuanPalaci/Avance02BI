@@ -41,7 +41,7 @@ CREATE TABLE DimInventario
     FOREIGN KEY (ID_Sucursal) REFERENCES DimSucursal (ID_Sucursal)
 );
 
--- Tabla FactVentas (con ID_Fecha y relaciones correctas)
+-- Tabla FactVentas
 CREATE TABLE FactVentas
 (
     ID_Venta    INT PRIMARY KEY,
