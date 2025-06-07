@@ -1,3 +1,8 @@
+--creacion de la base de datos FarmaciaDB y sus tablas
+CREATE DATABASE FarmaciaDB;
+GO
+USE FarmaciaDB;
+GO
 -- Tabla DimProducto
 CREATE TABLE DimProducto
 (
