@@ -1,0 +1,75 @@
+table DimFecha
+	lineageTag: 236bde2c-7840-40ca-ac8e-6e530fc3525c
+
+	column ID_Fecha
+		dataType: int64
+		formatString: 0
+		lineageTag: 81cad5ee-1f6c-4926-a4e9-6c66d20ec1ad
+		summarizeBy: none
+		sourceColumn: ID_Fecha
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fecha
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 96832c72-0e21-485f-85fc-c0d5600ff7bb
+		summarizeBy: none
+		sourceColumn: Fecha
+
+		variation Variación
+			isDefault
+			relationship: 04eccfea-fa07-4a8d-a1af-4d26860fe627
+			defaultHierarchy: LocalDateTable_d0468366-25af-4a23-8330-29a7db32468b.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Año
+		dataType: int64
+		formatString: 0
+		lineageTag: aeda09a6-69f5-4b1f-a3d1-3ea080080c40
+		summarizeBy: sum
+		sourceColumn: Año
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mes
+		dataType: int64
+		formatString: 0
+		lineageTag: 9675b212-fd31-4794-8fca-d471a9763ae7
+		summarizeBy: sum
+		sourceColumn: Mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column Día
+		dataType: int64
+		formatString: 0
+		lineageTag: a6649493-7ae4-4e5b-a3e6-0c12299016bd
+		summarizeBy: sum
+		sourceColumn: Día
+
+		annotation SummarizationSetBy = Automatic
+
+	column Semana
+		dataType: int64
+		formatString: 0
+		lineageTag: 7093c5c8-cfe1-4390-9438-f547155def9b
+		summarizeBy: sum
+		sourceColumn: Semana
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimFecha = m
+		mode: import
+		source =
+				let
+				    Origen = Sql.Database("localhost", "FarmaciaDB"),
+				    dbo_DimFecha = Origen{[Schema="dbo",Item="DimFecha"]}[Data]
+				in
+				    dbo_DimFecha
+
+	annotation PBI_ResultType = Table
+

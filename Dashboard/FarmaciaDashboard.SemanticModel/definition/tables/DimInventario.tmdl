@@ -1,0 +1,57 @@
+table DimInventario
+	lineageTag: 8b8b58d6-1327-4131-bd46-ee72d4fb3734
+
+	column ID_Producto
+		dataType: int64
+		formatString: 0
+		lineageTag: 668bdf61-e516-41fe-8d51-5c7fc0d5cd27
+		summarizeBy: none
+		sourceColumn: ID_Producto
+
+		annotation SummarizationSetBy = Automatic
+
+	column ID_Sucursal
+		dataType: int64
+		formatString: 0
+		lineageTag: cf5e0e94-ee51-4800-be13-63df92fcfb8f
+		summarizeBy: none
+		sourceColumn: ID_Sucursal
+
+		annotation SummarizationSetBy = Automatic
+
+	column StockActual
+		dataType: int64
+		formatString: 0
+		lineageTag: 8a0dbf63-e0c8-415a-863d-fac920787a0c
+		summarizeBy: sum
+		sourceColumn: StockActual
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaDeRestock
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 011131c1-6ca5-412b-916d-8f5f673fd003
+		summarizeBy: none
+		sourceColumn: FechaDeRestock
+
+		variation Variación
+			isDefault
+			relationship: f1adf781-a502-4955-9494-cfa92cba9063
+			defaultHierarchy: LocalDateTable_4e44437a-9a15-4eac-b54c-92d7583e501f.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition DimInventario = m
+		mode: import
+		source =
+				let
+				    Origen = Sql.Database("localhost", "FarmaciaDB"),
+				    dbo_DimInventario = Origen{[Schema="dbo",Item="DimInventario"]}[Data]
+				in
+				    dbo_DimInventario
+
+	annotation PBI_ResultType = Table
+

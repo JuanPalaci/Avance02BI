@@ -1,0 +1,45 @@
+relationship 04eccfea-fa07-4a8d-a1af-4d26860fe627
+	joinOnDateBehavior: datePartOnly
+	fromColumn: DimFecha.Fecha
+	toColumn: LocalDateTable_d0468366-25af-4a23-8330-29a7db32468b.Date
+
+relationship f1adf781-a502-4955-9494-cfa92cba9063
+	joinOnDateBehavior: datePartOnly
+	fromColumn: DimInventario.FechaDeRestock
+	toColumn: LocalDateTable_4e44437a-9a15-4eac-b54c-92d7583e501f.Date
+
+relationship 0b4478be-82c9-4f04-9e44-b3ce26f67040
+	joinOnDateBehavior: datePartOnly
+	fromColumn: FactVentas.Fecha
+	toColumn: LocalDateTable_aac497b9-57f9-485c-a27f-94f904a06ce4.Date
+
+relationship 63873df7-2ee1-41df-b2e2-e45963f2bb8a
+	fromColumn: DimInventario.ID_Producto
+	toColumn: DimProducto.ID_Producto
+
+	annotation PBI_IsFromSource = FS
+
+relationship 8313713e-fa3e-4b52-8a87-a1026c512ebf
+	fromColumn: DimInventario.ID_Sucursal
+	toColumn: DimSucursal.ID_Sucursal
+
+	annotation PBI_IsFromSource = FS
+
+relationship be7dadb3-746d-4ea4-893e-5fef4b055a48
+	fromColumn: FactVentas.ID_Fecha
+	toColumn: DimFecha.ID_Fecha
+
+	annotation PBI_IsFromSource = FS
+
+relationship 16432b9c-a758-4ab2-bc51-27d5783630ba
+	fromColumn: FactVentas.ID_Producto
+	toColumn: DimProducto.ID_Producto
+
+	annotation PBI_IsFromSource = FS
+
+relationship 393015fe-74e4-4ded-af04-d6dc8d098678
+	fromColumn: FactVentas.ID_Sucursal
+	toColumn: DimSucursal.ID_Sucursal
+
+	annotation PBI_IsFromSource = FS
+

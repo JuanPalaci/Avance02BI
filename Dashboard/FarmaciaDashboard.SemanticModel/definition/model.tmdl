@@ -1,0 +1,28 @@
+model Model
+	culture: es-ES
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: es-MX
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["DimFecha","DimInventario","DimProducto","DimSucursal","FactVentas"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.143.878.0 (25.05)+b20aa3b866ec1b70879135a4e60e4b1301c75b21
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table DimFecha
+ref table DateTableTemplate_e86b0926-728d-44d8-a212-98442398fded
+ref table LocalDateTable_d0468366-25af-4a23-8330-29a7db32468b
+ref table DimInventario
+ref table LocalDateTable_4e44437a-9a15-4eac-b54c-92d7583e501f
+ref table DimProducto
+ref table DimSucursal
+ref table FactVentas
+ref table LocalDateTable_aac497b9-57f9-485c-a27f-94f904a06ce4
+
+ref cultureInfo es-ES
+

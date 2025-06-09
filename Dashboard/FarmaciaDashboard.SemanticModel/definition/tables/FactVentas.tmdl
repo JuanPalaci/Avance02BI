@@ -1,0 +1,94 @@
+table FactVentas
+	lineageTag: 91ebc722-a50a-4c67-860b-cb9406f9c1ff
+
+	measure TotalVentas = (SUM(FactVentas[Total_Venta]))
+		lineageTag: f6524540-d2a7-4480-9e9b-4208ab1c77ea
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure CantidadesVendidas = (SUM(FactVentas[Cantidad]))
+		formatString: 0
+		lineageTag: 4703794b-3278-4f6e-8679-48ac4a9ca855
+
+	column ID_Venta
+		dataType: int64
+		formatString: 0
+		lineageTag: 5bca4f50-4e0e-4374-bcc0-dda928d795bf
+		summarizeBy: sum
+		sourceColumn: ID_Venta
+
+		annotation SummarizationSetBy = Automatic
+
+	column ID_Fecha
+		dataType: int64
+		formatString: 0
+		lineageTag: 24d4f0bf-d739-4728-835d-356b8e5443fc
+		summarizeBy: none
+		sourceColumn: ID_Fecha
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fecha
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 69037ef5-5584-478d-a994-72f9ff195bd9
+		summarizeBy: none
+		sourceColumn: Fecha
+
+		variation Variación
+			isDefault
+			relationship: 0b4478be-82c9-4f04-9e44-b3ce26f67040
+			defaultHierarchy: LocalDateTable_aac497b9-57f9-485c-a27f-94f904a06ce4.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ID_Producto
+		dataType: int64
+		formatString: 0
+		lineageTag: 92c5d757-d186-431f-ba84-8b48b2854ac9
+		summarizeBy: none
+		sourceColumn: ID_Producto
+
+		annotation SummarizationSetBy = Automatic
+
+	column ID_Sucursal
+		dataType: int64
+		formatString: 0
+		lineageTag: 8ee7d10f-7a0c-43b0-a3a8-e49971c50a37
+		summarizeBy: none
+		sourceColumn: ID_Sucursal
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cantidad
+		dataType: int64
+		formatString: 0
+		lineageTag: 36334fa7-625d-415d-9b07-a0c75f1404fc
+		summarizeBy: sum
+		sourceColumn: Cantidad
+
+		annotation SummarizationSetBy = Automatic
+
+	column Total_Venta
+		dataType: double
+		lineageTag: 70202813-4bbc-4344-8a9b-7b76c2c0df17
+		summarizeBy: sum
+		sourceColumn: Total_Venta
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition FactVentas = m
+		mode: import
+		source =
+				let
+				    Origen = Sql.Database("localhost", "FarmaciaDB"),
+				    dbo_FactVentas = Origen{[Schema="dbo",Item="FactVentas"]}[Data]
+				in
+				    dbo_FactVentas
+
+	annotation PBI_ResultType = Table
+

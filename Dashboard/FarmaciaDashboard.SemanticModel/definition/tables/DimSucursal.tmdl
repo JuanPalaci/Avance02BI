@@ -1,0 +1,55 @@
+table DimSucursal
+	lineageTag: a2830bbc-9980-4f45-a7d4-be0364620957
+
+	column ID_Sucursal
+		dataType: int64
+		formatString: 0
+		lineageTag: 9b11d34a-e2a6-4c68-bdd7-97fa346f5cce
+		summarizeBy: none
+		sourceColumn: ID_Sucursal
+
+		annotation SummarizationSetBy = Automatic
+
+	column Nombre
+		dataType: string
+		lineageTag: dc8a1e7e-cb93-4770-8446-a083a5371d47
+		summarizeBy: none
+		sourceColumn: Nombre
+
+		annotation SummarizationSetBy = Automatic
+
+	column Direccion
+		dataType: string
+		lineageTag: 6a22759a-c49e-465a-88f5-f60ce8005f77
+		summarizeBy: none
+		sourceColumn: Direccion
+
+		annotation SummarizationSetBy = Automatic
+
+	column Departamento
+		dataType: string
+		lineageTag: 8f860fea-4459-4f7f-a2bd-e6e22a7827f4
+		summarizeBy: none
+		sourceColumn: Departamento
+
+		annotation SummarizationSetBy = Automatic
+
+	column TipoSucursal
+		dataType: string
+		lineageTag: 3e2c8e46-ce20-47f8-9053-992e5189e80e
+		summarizeBy: none
+		sourceColumn: TipoSucursal
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimSucursal = m
+		mode: import
+		source =
+				let
+				    Origen = Sql.Database("localhost", "FarmaciaDB"),
+				    dbo_DimSucursal = Origen{[Schema="dbo",Item="DimSucursal"]}[Data]
+				in
+				    dbo_DimSucursal
+
+	annotation PBI_ResultType = Table
+

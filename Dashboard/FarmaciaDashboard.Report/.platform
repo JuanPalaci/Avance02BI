@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "FarmaciaDashboard"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "707a2290-dfb2-4b4b-87fe-a721c3672c9e"
+  }
+}

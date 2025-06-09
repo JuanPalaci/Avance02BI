@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "FarmaciaDashboard"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "57ec4697-d5be-445b-b738-fc32c67602d9"
+  }
+}

@@ -1,0 +1,61 @@
+table DimProducto
+	lineageTag: 580bda95-a289-47e1-9761-b7e07095683f
+
+	measure TotalProductos = (COUNTROWS(DimProducto))
+		formatString: 0
+		lineageTag: a4059253-6a29-4656-80b0-defff567b9e6
+
+	column ID_Producto
+		dataType: int64
+		formatString: 0
+		lineageTag: 5123db7d-2576-49e7-ab53-af9ce3e50d80
+		summarizeBy: none
+		sourceColumn: ID_Producto
+
+		annotation SummarizationSetBy = Automatic
+
+	column NombreProducto
+		dataType: string
+		lineageTag: ba3968f5-db5a-40fe-bf1d-632671c0bf93
+		summarizeBy: none
+		sourceColumn: NombreProducto
+
+		annotation SummarizationSetBy = Automatic
+
+	column Categoria
+		dataType: string
+		lineageTag: d1294360-8f4a-440b-843d-70cdd5a2ef33
+		summarizeBy: none
+		sourceColumn: Categoria
+
+		annotation SummarizationSetBy = Automatic
+
+	column PrecioUnitario
+		dataType: double
+		lineageTag: 673f30bf-aff5-417b-b542-8a6a3bfe54d7
+		summarizeBy: sum
+		sourceColumn: PrecioUnitario
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column EstadoDeRotacion
+		dataType: string
+		lineageTag: 93307f11-ade0-4d19-832f-74306ee8559b
+		summarizeBy: none
+		sourceColumn: EstadoDeRotacion
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimProducto = m
+		mode: import
+		source =
+				let
+				    Origen = Sql.Database("localhost", "FarmaciaDB"),
+				    dbo_DimProducto = Origen{[Schema="dbo",Item="DimProducto"]}[Data]
+				in
+				    dbo_DimProducto
+
+	annotation PBI_ResultType = Table
+
